@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour {
     public static GameController Singleton;
 
     [HideInInspector]
-    public PlayerInput mainCharacterInput;
+    public StandardMovement.PlayerInput mainCharacterInput;
 
     [HideInInspector]
     public Player mainCharacter;
