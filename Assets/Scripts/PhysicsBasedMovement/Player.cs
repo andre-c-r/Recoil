@@ -15,6 +15,7 @@ public class Player : MonoBehaviour {
     int _framesFromLastShot = 0;
 
     public Weapon _equipedWeapon;
+    Vector2 _aimDirection;
 
     CollisionChecker _collisionChecker;
 
@@ -55,15 +56,23 @@ public class Player : MonoBehaviour {
         }
     }
 
+    public void AimWeapon(Vector2 aimDirection) {
+        _aimDirection = aimDirection;
+
+        Vector2 realAimLocation = new Vector2(_equipedWeapon.transform.position.x + aimDirection.x, _equipedWeapon.transform.position.y + aimDirection.y);
+
+        _equipedWeapon.AimWeapon(realAimLocation);
+    }
+
     public void EquipWeapon(Weapon newWeapon) {
         _equipedWeapon = newWeapon;
     }
 
-    public void FireWeapon(Vector2 direction) {
+    public void FireWeapon() {
         if (_equipedWeapon == null) return;
 
-        ApplyExternalForce(_equipedWeapon.recoilStrenght * direction.normalized * -1);
-        _equipedWeapon.FireWeapon();
+        ApplyExternalForce(_equipedWeapon.recoilStrenght * _aimDirection.normalized * -1);
+        _equipedWeapon.FireWeapon(_aimDirection);
 
         _framesFromLastShot = framesToReload;
     }

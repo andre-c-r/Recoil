@@ -12,6 +12,10 @@ public class PlayerInput : MonoBehaviour {
 
     Vector2 _axisToMouse;
 
+    public Vector2 aimAxis {
+        get { return _axisToMouse; }
+    }
+
     bool mouseAndKeyboard = true;
 
     private void Awake() {
@@ -29,11 +33,10 @@ public class PlayerInput : MonoBehaviour {
     }
 
     private void SetupInputSystem() {
-
         _controls = new InputMaster();
 
-        if(mouseAndKeyboard)
-            _controls.Player.Fire.performed += ctx => _player.FireWeapon(_axisToMouse.normalized);
+        if (mouseAndKeyboard)
+            _controls.Player.Fire.performed += ctx => _player.FireWeapon();
         //controls.Player.Jump.canceled += ctx => player.OnJumpInputUp();
 
         //Die to reset
@@ -45,5 +48,7 @@ public class PlayerInput : MonoBehaviour {
 
     private void Update() {
         _axisToMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition) - this.transform.position;
+
+        _player.AimWeapon(_axisToMouse.normalized);
     }
 }

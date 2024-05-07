@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    float _lifetime = 8;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void Start() {
+        Destroy(this.gameObject, _lifetime);
     }
 }

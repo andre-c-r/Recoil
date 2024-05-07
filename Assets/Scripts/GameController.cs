@@ -7,9 +7,6 @@ public class GameController : MonoBehaviour {
     public static GameController Singleton;
 
     [HideInInspector]
-    public PlayerInput mainCharacterInput;
-
-    [HideInInspector]
     public Player mainCharacter;
 
     private void Awake() {
