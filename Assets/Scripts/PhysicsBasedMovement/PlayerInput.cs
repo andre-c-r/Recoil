@@ -12,6 +12,8 @@ public class PlayerInput : MonoBehaviour {
 
     Vector2 _axisToMouse;
 
+    bool mouseAndKeyboard = true;
+
     private void Awake() {
         _player = this.GetComponent<Player>();
 
@@ -30,7 +32,8 @@ public class PlayerInput : MonoBehaviour {
 
         _controls = new InputMaster();
 
-        _controls.Player.Fire.performed += ctx => _player.ApplyExternalForce(_axisToMouse.normalized * 700 * -1);
+        if(mouseAndKeyboard)
+            _controls.Player.Fire.performed += ctx => _player.FireWeapon(_axisToMouse.normalized);
         //controls.Player.Jump.canceled += ctx => player.OnJumpInputUp();
 
         //Die to reset
