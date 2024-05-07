@@ -14,6 +14,8 @@ public class Player : MonoBehaviour {
     public int framesToReload = 6;
     int _framesFromLastShot = 0;
 
+    public float extraVerticalImpulseFactor = 1;
+
     public Weapon _equipedWeapon;
     Vector2 _aimDirection;
 
@@ -28,17 +30,21 @@ public class Player : MonoBehaviour {
         GrounderCheck();
 
         SpeedCheck();
+
+        Debug.Log(_rigidBody.velocity);
     }
 
     public void ApplyExternalForce(Vector2 force) {
-        _rigidBody.AddForce(force);
+        _rigidBody.AddForce(force, ForceMode2D.Impulse);
+
+        SpeedCheck();
     }
 
     void SpeedCheck() {
         Vector2 newSpeed = _rigidBody.velocity;
 
-        newSpeed.x = newSpeed.x > maxSpeed.x ? maxSpeed.x : newSpeed.x;
-        newSpeed.y = newSpeed.y > maxSpeed.y ? maxSpeed.y : newSpeed.y;
+        newSpeed.x = MathF.Abs(newSpeed.x) > maxSpeed.x ? maxSpeed.x * Mathf.Sign(newSpeed.x) : newSpeed.x;
+        newSpeed.y = MathF.Abs(newSpeed.y) > maxSpeed.y ? maxSpeed.y * Mathf.Sign(newSpeed.y) : newSpeed.y;
 
         _rigidBody.velocity = newSpeed;
     }
@@ -71,7 +77,11 @@ public class Player : MonoBehaviour {
     public void FireWeapon() {
         if (_equipedWeapon == null) return;
 
-        ApplyExternalForce(_equipedWeapon.recoilStrenght * _aimDirection.normalized * -1);
+        //Debug.Log(_aimDirection.normalized + "  " + _equipedWeapon.recoilStrenght * new Vector2(_aimDirection.normalized.x, _aimDirection.normalized.y * _rigidBody.gravityScale) * -1);
+
+        ApplyExternalForce(_equipedWeapon.recoilStrenght * new Vector2(_aimDirection.normalized.x,
+            _aimDirection.normalized.y * extraVerticalImpulseFactor * _rigidBody.gravityScale) * -1);
+
         _equipedWeapon.FireWeapon(_aimDirection);
 
         _framesFromLastShot = framesToReload;
