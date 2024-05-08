@@ -8,30 +8,28 @@ public class GrenadePhysics : MonoBehaviour
     public float radius = 5f;
     public float force = 700f;
     public GameObject explosionEffect;
-    float countdown;
-    bool hasExploded = false;
+
+    public TimedBomb timedBomb;
 
     // Start is called before the first frame update
     void Start()
     {
-        countdown = delay;
+        timedBomb = GetComponent<TimedBomb>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        countdown -= Time.deltaTime;
-        if (countdown <= 0f && !hasExploded)
+        if (timedBomb.hasExploded = true)
         {
             Explode();
-            hasExploded = true;
         }
     }
 
     void Explode ()
     {
         //Show effect
-                if (!hasExploded)
+                if (!timedBomb.hasExploded)
         {
             Instantiate(explosionEffect, transform.position, transform.rotation);
         }
