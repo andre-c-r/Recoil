@@ -25,11 +25,13 @@ public class Player : MonoBehaviour {
     Inventory _inventory;
     Vector2 _aimDirection;
 
-    CollisionChecker _collisionChecker;
+    [Header("Grounder")]
+    public Vector2 boxSize;
+    public float castDistance;
+    public LayerMask grounderMask;
 
     private void Awake() {
         _rigidBody = this.GetComponent<Rigidbody2D>();
-        _collisionChecker = this.GetComponent<CollisionChecker>();
     }
 
     private void Start() {
@@ -77,16 +79,19 @@ public class Player : MonoBehaviour {
     }
 
     void GrounderCheck() {
-        _collisionChecker.CheckGrounder(_rigidBody.velocity);
-
         if (_framesFromLastShot > 0) {//cooldown to reset jump to avoid double jump
             _framesFromLastShot--;
             return;
         }
 
-        if (_collisionChecker.collisions.below && Array.IndexOf(_collisionChecker.collisions.verticalTag, "Floor") > -1) { //Cehck colision below and floor tag
+
+        if (_framesFromLastShot <= 0 && Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistance, grounderMask)) {
             _inventory.equippedWeapon.FullReload();
         }
+    }
+
+    private void OnDrawGizmos() {
+        Gizmos.DrawWireCube(transform.position - (transform.up * castDistance), boxSize);
     }
 
     public void SetAimAxis(Vector2 aimDirection) {

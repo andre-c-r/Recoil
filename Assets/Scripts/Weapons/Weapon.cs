@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour {
     [SerializeField]
     protected int maxAmmo;
 
-    protected int _currentAmmo;
+    public int _currentAmmo;
     public int currentAmmo {
         get { return _currentAmmo; }
     }
@@ -24,7 +24,7 @@ public class Weapon : MonoBehaviour {
     int _framesTillNexShot = 0;
     int _currentFramesTillNexShot = 0;
     public bool IsReadyToShoot {
-        get { return _currentFramesTillNexShot <= 0; }
+        get { return _currentFramesTillNexShot <= 0 && currentAmmo > 0; }
     }
 
     public float recoilStrenght {

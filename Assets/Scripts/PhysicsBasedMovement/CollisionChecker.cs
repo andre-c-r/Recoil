@@ -4,11 +4,14 @@ using System.Reflection;
 using Unity.Mathematics;
 using UnityEditor.ShaderGraph.Drawing;
 using UnityEngine.EventSystems;
+using System.Linq;
 
 public class CollisionChecker : RaycastController {
     public CollisionInfo collisions;
 
     public float checkDistance = 0.5f;
+
+    public Transform[] raycastOriginPoints;
 
     public override void Start() {
         base.Start();
@@ -30,11 +33,19 @@ public class CollisionChecker : RaycastController {
 
         float rayLength = checkDistance;
 
+        if (raycastOriginPoints.Length > 0) verticalRayCount = raycastOriginPoints.Length;
 
         for (int i = 0; i < verticalRayCount; i++) {
+            Vector2 rayOrigin = new Vector2();
 
-            Vector2 rayOrigin = (directionY == -1) ? raycastOrigins.bottomLeft : raycastOrigins.topLeft;
-            rayOrigin += Vector2.right * (verticalRaySpacing * i + currentSpeed.x * Time.deltaTime);
+            if (verticalRayCount == 0) {
+                rayOrigin = (directionY == -1) ? raycastOrigins.bottomLeft : raycastOrigins.topLeft;
+                rayOrigin += Vector2.right * (verticalRaySpacing * i + currentSpeed.x * Time.deltaTime);
+            }
+            else {
+                rayOrigin = raycastOriginPoints[i].position;
+            }
+
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, collisionMask);
 
             Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength, Color.red);
