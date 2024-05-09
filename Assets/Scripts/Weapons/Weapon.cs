@@ -4,7 +4,7 @@ using UnityEngine;
 using static UnityEditor.FilePathAttribute;
 using static UnityEngine.GraphicsBuffer;
 
-public abstract class Weapon : MonoBehaviour {
+public class Weapon : MonoBehaviour {
     [SerializeField]
     protected float _recoilStrenght;
     [SerializeField]
@@ -20,11 +20,28 @@ public abstract class Weapon : MonoBehaviour {
 
     public Transform firePoint;
 
+    public int shotPerSecond = 3;
+    int _framesTillNexShot = 0;
+    int _currentFramesTillNexShot = 0;
+    public bool IsReadyToShoot {
+        get { return _currentFramesTillNexShot <= 0; }
+    }
+
     public float recoilStrenght {
         get { return _recoilStrenght; }
     }
 
-    public abstract void FireWeapon(Vector2 direction);
+    public virtual void FireWeapon(Vector2 direction) {
+        if (!IsReadyToShoot) return;
+
+        _currentFramesTillNexShot = _framesTillNexShot;
+
+        _currentAmmo--;
+
+        if (projectilePrefab == null) return;
+
+        Instantiate(projectilePrefab, firePoint.position, Quaternion.identity).GetComponent<Rigidbody2D>().velocity = direction.normalized * projectileSpeed;
+    }
 
     public virtual void Reload(int ammoAmount) {
         _currentAmmo += ammoAmount;
@@ -45,5 +62,14 @@ public abstract class Weapon : MonoBehaviour {
         // get the rotation that points the Z axis forward, and the Y axis 90 degrees away from the target
         // (resulting in the X axis facing the target)
         this.transform.rotation = Quaternion.LookRotation(forward: Vector3.forward, upwards: rotatedVectorToTarget);
+    }
+
+    private void Awake() {
+        _framesTillNexShot = 60 / shotPerSecond;
+    }
+
+    private void FixedUpdate() {
+        if (_currentFramesTillNexShot > 0)
+            _currentFramesTillNexShot--;
     }
 }
