@@ -21,6 +21,10 @@ public class GameController : MonoBehaviour {
 
     public bool controller = false;
 
+    public void ResetLevel() {
+
+    }
+
     private void Awake() {
         if (Singleton != null) Destroy(this.gameObject);
 

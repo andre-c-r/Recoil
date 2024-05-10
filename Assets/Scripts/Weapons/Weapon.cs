@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour {
     [SerializeField]
     protected int maxAmmo;
 
-    public int _currentAmmo;
+    int _currentAmmo;
     public int currentAmmo {
         get { return _currentAmmo; }
     }
