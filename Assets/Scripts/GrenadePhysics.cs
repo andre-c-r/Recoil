@@ -20,7 +20,7 @@ public class GrenadePhysics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timedBomb.hasExploded = true)
+        if (timedBomb.hasExploded == true)
         {
             Explode();
         }
