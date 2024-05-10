@@ -9,7 +9,7 @@ public class InteractionManager : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.collider == null) return;
 
-        if (collision.collider.attachedRigidbody.CompareTag("Enemy")) {
+        if (collision.collider.CompareTag("Enemy")) {
             GameController.Singleton?.ResetLevel();
         }
     }

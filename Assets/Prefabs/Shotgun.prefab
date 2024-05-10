@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe30dfbab991f9a4599f56d1f2fda5a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _recoilStrenght: 7.5
+  _recoilStrenght: 6.5
   maxAmmo: 3
   projectilePrefab: {fileID: 7574575975367062024, guid: 38e8341f6eee0034d9a34522ac61b52b, type: 3}
   projectileSpeed: 50
