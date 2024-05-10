@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class GrenadePhysics : MonoBehaviour
+public class PullGrenadePhysics : MonoBehaviour
 {
-    [SerializeField] public float radius = 5f;
-    [SerializeField] public float force = 700f;
+    [SerializeField] public float pullRadius = 100f;
+    [SerializeField] public float pullForce = 1000f;
     [SerializeField] public GameObject explosionEffect;
 
     public TimedBomb timedBomb;
@@ -33,20 +34,20 @@ public class GrenadePhysics : MonoBehaviour
             Instantiate(explosionEffect, transform.position, transform.rotation);
         }
 
-        //Add Force
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius);
+        //Add pullForce
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, pullRadius);
 
         foreach (Collider2D nearbyObject in colliders)
         {
             Rigidbody2D rb = nearbyObject.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-            Vector2 direction = rb.transform.position - transform.position;
+            Vector2 direction = transform.position - rb.transform.position;
 
             float distance = direction.magnitude;
-            float forceMagnitude = Mathf.Clamp01((radius - distance) / radius) * force;
+            float pullForceMagnitude = Mathf.Clamp01((pullRadius - distance) / pullRadius) * pullForce;
 
-            rb.AddForce(direction.normalized * forceMagnitude);
+            rb.AddForce(direction.normalized * pullForceMagnitude);
             }
         }
             // Damage
