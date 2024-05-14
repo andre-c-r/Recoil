@@ -46,6 +46,14 @@ public class Player : MonoBehaviour {
         EquipWeapon(armory.defaultWeapon);
     }
 
+    public void ReflectSpeed(Vector2 reflectionNormal) {
+        _rigidBody.velocity = Vector2.Reflect(new Vector2(maxSpeed.x * reflectionNormal.x * -1, maxSpeed.y), reflectionNormal);
+
+        _rigidBody.velocity *= maxSpeed;
+
+        SpeedCheck();
+    }
+
     private void FixedUpdate() {
         GrounderCheck();
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
     public static GameController Singleton;
@@ -22,7 +23,7 @@ public class GameController : MonoBehaviour {
     public bool controller = false;
 
     public void ResetLevel() {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void Awake() {

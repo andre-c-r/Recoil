@@ -40,7 +40,7 @@ public class PlayerInput : MonoBehaviour {
         //controls.Player.Jump.canceled += ctx => player.OnJumpInputUp();
 
         //Die to reset
-        //controls.Player.Reset.performed += ctx => GameController.Singleton.Die ();
+        _controls.Player.Reset.performed += ctx => GameController.Singleton?.ResetLevel();
 
         _controls.Player.LeftAxis.performed += ctx => _axisLeftTrigger = ctx.ReadValue<Vector2>();
 
