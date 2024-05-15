@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Armory", menuName = "ScriptableObjects/Armory", order = 1)]
 public class Armory : ScriptableObject {
     public GameObject defaultWeapon;
+    public GameObject defaultGranade;
 
     public GameObject[] weaponPrefabs;
+    public GameObject[] granadesPrefabs;
 }

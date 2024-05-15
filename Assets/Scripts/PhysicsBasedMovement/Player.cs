@@ -38,6 +38,7 @@ public class Player : MonoBehaviour {
         if (GameController.Singleton != null) {
             _inventory = GameController.Singleton.playerinventory;
             armory = GameController.Singleton.armory;
+            GameController.Singleton.mainCharacter = this;
         }
         else {
             _inventory = this.gameObject.AddComponent<Inventory>();
