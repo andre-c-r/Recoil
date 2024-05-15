@@ -139,6 +139,126 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: E2_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 44
+      width: 30
+      height: 32
+    spriteID: a820c803b9e7faa499615ec7f1bb30ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 44}
+  - name: E2_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 84
+      width: 30
+      height: 32
+    spriteID: 8a4454d3053aacb4d9e1c2f9fcf3a234
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 84}
+  - name: E2_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 4
+      width: 30
+      height: 32
+    spriteID: 2de9c783cee79f14db42faa1225ee4c5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 4}
+  - name: E2_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 84
+      width: 30
+      height: 31
+    spriteID: ee28d0d490120234aaa0a86761d4f095
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 84}
+  - name: E2_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 80
+      y: 4
+      width: 30
+      height: 30
+    spriteID: 5b180812a08439e4bb6e1da621ea6b42
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 80, y: 4}
+  - name: E2_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 44
+      width: 30
+      height: 32
+    spriteID: 930897ec08c46a84fa735df755531191
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 44}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -148,7 +268,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: E2
+    - name: E2_Frame_0
       frameIndex: 0
       cellRect:
         x: 1
@@ -156,6 +276,54 @@ ScriptedImporter:
         width: 30
         height: 32
       spriteId: 49e43ed23d346e84385ffe42d8697b7c
+    - name: E2_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 1
+        y: 0
+        width: 30
+        height: 32
+      spriteId: a820c803b9e7faa499615ec7f1bb30ae
+    - name: E2_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 1
+        y: 0
+        width: 30
+        height: 32
+      spriteId: 8a4454d3053aacb4d9e1c2f9fcf3a234
+    - name: E2_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 1
+        y: 0
+        width: 30
+        height: 32
+      spriteId: 2de9c783cee79f14db42faa1225ee4c5
+    - name: E2_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 1
+        y: 0
+        width: 30
+        height: 31
+      spriteId: ee28d0d490120234aaa0a86761d4f095
+    - name: E2_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 1
+        y: 0
+        width: 30
+        height: 30
+      spriteId: 5b180812a08439e4bb6e1da621ea6b42
+    - name: E2_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 1
+        y: 0
+        width: 30
+        height: 32
+      spriteId: 930897ec08c46a84fa735df755531191
     linkedCells: []
     parentIndex: -1
   platformSettings: []
