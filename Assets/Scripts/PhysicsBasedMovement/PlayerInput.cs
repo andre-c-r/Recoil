@@ -49,8 +49,8 @@ public class PlayerInput : MonoBehaviour {
     }
 
     private void Update() {
-        //if (GameController.Singleton != null)
-          //  mnK = !GameController.Singleton.controller;
+        if (GameController.Singleton != null)
+           mnK = !GameController.Singleton.controller;
 
         _axisToMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition) - this.transform.position;
 

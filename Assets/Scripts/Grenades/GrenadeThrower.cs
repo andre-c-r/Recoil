@@ -8,11 +8,11 @@ using UnityEngine.Rendering;
 [CreateAssetMenu(fileName = "GrenadeThrower", menuName = "ScriptableObjects/GrenadeThrower", order = 2)]
 public class GrenadeThrower : ScriptableObject {
     [SerializeField]
-    float throwForce = 20f;
+    protected float throwForce = 20f;
 
     public GameObject grenadePrefab;
 
-    bool _ammo = false;
+    protected bool _ammo = false;
     
     public bool ammo {
         get {
@@ -24,7 +24,7 @@ public class GrenadeThrower : ScriptableObject {
         _ammo = true;
     }
 
-    public void ThrowGrenade(Vector2 direction, Transform firePoint) {
+    public virtual void ThrowGrenade(Vector2 direction, Transform firePoint) {
         if (!_ammo) return;
 
         _ammo = false;

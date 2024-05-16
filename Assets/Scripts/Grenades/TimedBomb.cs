@@ -5,7 +5,6 @@ using UnityEngine;
 public abstract class TimedBomb : Grenade {
     public float delay = 3f;
     float countdown;
-    public bool hasExploded = false;
 
     // Start is called before the first frame update
     void Start() {
@@ -15,11 +14,7 @@ public abstract class TimedBomb : Grenade {
     // Update is called once per frame
     protected virtual void FixedUpdate() {
         countdown -= Time.deltaTime;
-        if (countdown <= 0f && !hasExploded) {
-            hasExploded = true;
-        }
-
-        if (hasExploded == true) {
+        if (countdown <= 0f) {
             Explode();
         }
     }

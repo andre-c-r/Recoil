@@ -4,18 +4,14 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class PullGrenadePhysics : TimedBomb {
-    [SerializeField] public float pullRadius = 100f;
-    [SerializeField] public float pullForce = 1000f;
-    [SerializeField] public GameObject explosionEffect;
-
     public override void Explode() {
         //Show effect
-        if (!hasExploded) {
+        if (explosionEffect != null) {
             Instantiate(explosionEffect, transform.position, transform.rotation);
         }
 
         //Add pullForce
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, pullRadius);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius);
 
         foreach (Collider2D nearbyObject in colliders) {
             Rigidbody2D rb = nearbyObject.GetComponent<Rigidbody2D>();
@@ -23,7 +19,7 @@ public class PullGrenadePhysics : TimedBomb {
                 Vector2 direction = transform.position - rb.transform.position;
 
                 float distance = direction.magnitude;
-                float pullForceMagnitude = Mathf.Clamp01((pullRadius - distance) / pullRadius) * pullForce;
+                float pullForceMagnitude = Mathf.Clamp01((radius - distance) / radius) * force;
 
                 rb.AddForce(direction.normalized * pullForceMagnitude);
             }

@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
-public class GrenadePhysics : TimedBomb {
+public class C4 : Grenade {
 
     public override void Explode() {
         //Show effect
