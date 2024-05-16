@@ -24,6 +24,7 @@ public class Player : MonoBehaviour {
     public Armory armory;
     Inventory _inventory;
     Vector2 _aimDirection;
+    Vector2 _grenadeAimDirection;
 
     [Header("Grounder")]
     public Vector2 boxSize;
@@ -45,6 +46,7 @@ public class Player : MonoBehaviour {
         }
 
         EquipWeapon(armory.defaultWeapon);
+        _inventory.EquipGrenade(armory.defaultGranade);
     }
 
     public void ReflectSpeed(Vector2 reflectionNormal) {
@@ -95,7 +97,7 @@ public class Player : MonoBehaviour {
 
 
         if (_framesFromLastShot <= 0 && Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistance, grounderMask)) {
-            _inventory.equippedWeapon.FullReload();
+            _inventory.ReloadEquipment();
         }
     }
 
@@ -103,8 +105,9 @@ public class Player : MonoBehaviour {
         Gizmos.DrawWireCube(transform.position - (transform.up * castDistance), boxSize);
     }
 
-    public void SetAimAxis(Vector2 aimDirection) {
+    public void SetAimAxis(Vector2 aimDirection, Vector2 grenadeAimDirection) {
         _aimDirection = aimDirection;
+        _grenadeAimDirection = grenadeAimDirection;
     }
 
     void AimWeapon() {
@@ -132,5 +135,9 @@ public class Player : MonoBehaviour {
         _inventory.equippedWeapon.FireWeapon(_aimDirection);
 
         _framesFromLastShot = framesToReload;
+    }
+
+    public void FireGranade() {
+        _inventory.grenadeThrower.ThrowGrenade(_grenadeAimDirection, this.transform);
     }
 }
