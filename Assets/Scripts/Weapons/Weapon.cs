@@ -66,6 +66,8 @@ public class Weapon : MonoBehaviour {
 
     private void Awake() {
         _framesTillNexShot = 60 / shotPerSecond;
+
+        FullReload();
     }
 
     private void FixedUpdate() {
