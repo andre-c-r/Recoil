@@ -52,3 +52,4 @@ app-build
 app-build-ios/
 bin
 asas.keystore
+.vscode
