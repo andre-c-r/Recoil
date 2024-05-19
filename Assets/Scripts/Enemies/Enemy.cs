@@ -12,6 +12,9 @@ public class Enemy : MonoBehaviour {
     [SerializeField]
     GameObject shield;
 
+    [SerializeField]
+    GameObject deathExplosion;
+
     protected void Start() {
         shield.SetActive(shieldedUnity);
     }
@@ -26,6 +29,12 @@ public class Enemy : MonoBehaviour {
 
         if (maxLife <= 0) {
             GameController.Singleton?.playerinventory.ReloadEquipment();
+
+            if (deathExplosion != null) {
+                GameObject explosion = Instantiate(deathExplosion, this.transform.position, this.transform.rotation);
+                Destroy(explosion, 5);
+            }
+
             this.gameObject.SetActive(false);
         }
     }
