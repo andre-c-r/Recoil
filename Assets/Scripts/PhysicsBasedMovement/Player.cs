@@ -33,6 +33,11 @@ public class Player : MonoBehaviour {
 
     private void Awake() {
         _rigidBody = this.GetComponent<Rigidbody2D>();
+        
+        if (GameController.Checkpoint != Vector2.zero)
+        {
+            transform.position = GameController.Checkpoint;
+        }
     }
 
     private void Start() {
