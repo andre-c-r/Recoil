@@ -1,4 +1,7 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+//using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,21 +22,15 @@ public class GameController : MonoBehaviour {
 
     public bool controller = false;
 
-    public static Vector2 Checkpoint { get; set; } = Vector2.zero;
-
     public void ResetLevel() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-    
-    public void ResetToCheckpoint() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void Awake() {
-        if (Singleton != null) Destroy(this.gameObject); 
+        if (Singleton != null) Destroy(this.gameObject);
 
         Singleton = this;
-        
+
         _playerinventory = this.gameObject.AddComponent<Inventory>();
     }
 }

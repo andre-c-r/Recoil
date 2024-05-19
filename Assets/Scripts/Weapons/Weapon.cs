@@ -1,4 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+//using static UnityEditor.FilePathAttribute;
+using static UnityEngine.GraphicsBuffer;
 
 public class Weapon : MonoBehaviour {
     [SerializeField]
@@ -62,8 +66,6 @@ public class Weapon : MonoBehaviour {
 
     private void Awake() {
         _framesTillNexShot = 60 / shotPerSecond;
-
-        FullReload();
     }
 
     private void FixedUpdate() {
