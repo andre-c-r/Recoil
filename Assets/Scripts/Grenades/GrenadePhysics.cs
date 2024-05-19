@@ -7,7 +7,9 @@ public class GrenadePhysics : TimedBomb {
     public override void Explode() {
         //Show effect
         if (explosionEffect != null) {
-            Instantiate(explosionEffect, transform.position, transform.rotation);
+            GameObject explosion = Instantiate(explosionEffect, transform.position, transform.rotation);
+            explosion.transform.localScale = new Vector3(radius, radius, radius);
+            Destroy(explosion, 5);
         }
 
         //Add Force
