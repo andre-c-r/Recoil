@@ -56,5 +56,6 @@ namespace StandardMovement {
         void ChangeRandonValue() {
             anim.SetInteger("randonValue", Random.Range(randonvalueMinMax.x, randonvalueMinMax.y + 1));
         }
+
     }
 }

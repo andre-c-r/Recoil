@@ -53,3 +53,4 @@ app-build-ios/
 bin
 asas.keystore
 .vscode
+*.meta
