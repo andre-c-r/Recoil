@@ -21063,6 +21063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1af0ad05b50062c488233b9f5c8bf277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dust: {fileID: 4929048750986351577, guid: aebef9b194efaba448bddc7e893d17b4, type: 3}
 --- !u!213 &1849740024
 Sprite:
   m_ObjectHideFlags: 0
