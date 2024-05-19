@@ -22,6 +22,8 @@ public class GameController : MonoBehaviour {
 
     public bool controller = false;
 
+    public static Vector2 Checkpoint { get; set; } = Vector2.zero;
+
     public void ResetLevel() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
