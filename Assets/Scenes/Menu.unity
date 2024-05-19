@@ -656,7 +656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df42fbf2880daea46bcd319076ce7d8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelInicial: TesteTexturas
+  LevelInicial: Tutorial
 --- !u!1 &862702526
 GameObject:
   m_ObjectHideFlags: 0
