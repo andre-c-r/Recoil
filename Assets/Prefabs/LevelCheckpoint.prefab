@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7719853771543179191}
   - component: {fileID: -62655078818368600}
   - component: {fileID: 914911658029176532}
-  - component: {fileID: 6272559386915128275}
+  - component: {fileID: 7171237575794826711}
   m_Layer: 0
   m_Name: LevelCheckpoint
   m_TagString: Untagged
@@ -131,7 +131,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6272559386915128275
+--- !u!114 &7171237575794826711
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1190782286536666849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a08c638f069cc154dbd0a6b12e7f6a1e, type: 3}
+  m_Script: {fileID: 11500000, guid: f00afbb16b6f8d248a71542f21cb564f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   snd: {fileID: 0}

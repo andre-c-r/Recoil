@@ -132,7 +132,7 @@ Transform:
   m_GameObject: {fileID: 3710462378255643777}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.23, y: 18.92, z: 0}
+  m_LocalPosition: {x: 36.79833, y: 2.1401114, z: -0.3267145}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -206,6 +206,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 2796980009640562135}
+  deathExplosion: {fileID: 0}
 --- !u!58 &8763795153413333713
 CircleCollider2D:
   m_ObjectHideFlags: 0
