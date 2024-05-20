@@ -55,3 +55,4 @@ asas.keystore
 .vscode
 *.meta
 dist/*
+*.mp4
