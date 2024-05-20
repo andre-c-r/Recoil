@@ -171,7 +171,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 2147483648
+      m_AllTileFlags: 0
   m_AnimatedTiles:
   - first: {x: -2, y: -2, z: 0}
     second:
@@ -180,7 +180,7 @@ Tilemap:
       - {fileID: -1985263921, guid: 3eddfb0a329f4654fac7ae8ad2204661, type: 3}
       - {fileID: -354704863, guid: 3eddfb0a329f4654fac7ae8ad2204661, type: 3}
       - {fileID: 1332299040, guid: 3eddfb0a329f4654fac7ae8ad2204661, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 4
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -1, y: -2, z: 0}
@@ -190,7 +190,7 @@ Tilemap:
       - {fileID: 970198826, guid: 3eddfb0a329f4654fac7ae8ad2204661, type: 3}
       - {fileID: -2029166984, guid: 3eddfb0a329f4654fac7ae8ad2204661, type: 3}
       - {fileID: -1188195246, guid: 3eddfb0a329f4654fac7ae8ad2204661, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 4
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 0, y: -2, z: 0}
@@ -200,7 +200,7 @@ Tilemap:
       - {fileID: 1274620091, guid: 3eddfb0a329f4654fac7ae8ad2204661, type: 3}
       - {fileID: -1299912024, guid: 3eddfb0a329f4654fac7ae8ad2204661, type: 3}
       - {fileID: 886598182, guid: 3eddfb0a329f4654fac7ae8ad2204661, type: 3}
-      m_AnimationSpeed: 1
+      m_AnimationSpeed: 4
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 1, y: -2, z: 0}
@@ -210,7 +210,7 @@ Tilemap:
       - {fileID: 634030147, guid: 3eddfb0a329f4654fac7ae8ad2204661, type: 3}
       - {fileID: 1449965189, guid: 3eddfb0a329f4654fac7ae8ad2204661, type: 3}
       - {fileID: 1251564303, guid: 3eddfb0a329f4654fac7ae8ad2204661, type: 3}
-      m_AnimationSpeed: 1
+      m_AnimationSpeed: 4
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -2, y: 1, z: 0}
@@ -221,7 +221,7 @@ Tilemap:
       - {fileID: -577300922, guid: 993f56c29b306944e9271193cbc7ff49, type: 3}
       - {fileID: -903592057, guid: 993f56c29b306944e9271193cbc7ff49, type: 3}
       - {fileID: 1819400260, guid: 993f56c29b306944e9271193cbc7ff49, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 4
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -416,7 +416,7 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!114 &712270373664809426
+--- !u!114 &4009854454364935583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

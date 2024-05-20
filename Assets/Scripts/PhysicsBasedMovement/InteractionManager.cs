@@ -13,8 +13,7 @@ public class InteractionManager : MonoBehaviour {
         if (collision.collider == null) return;
 
         if (collision.collider.CompareTag("Enemy")) {
-            // GameController.Singleton?.ResetLevel();
-            GameController.Singleton?.ResetToCheckpoint();
+            GameController.Singleton?.ResetLevel();
         }
 
         if (collision.collider.CompareTag("RubberFloor")) {
