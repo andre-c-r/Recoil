@@ -276,6 +276,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 369751631}
+  deathExplosion: {fileID: 0}
 --- !u!212 &12328353
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -413,6 +414,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1904589682}
+  deathExplosion: {fileID: 0}
 --- !u!212 &28871374
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -550,6 +552,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 2033282337}
+  deathExplosion: {fileID: 0}
 --- !u!212 &32273683
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -960,6 +963,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1600770847}
+  deathExplosion: {fileID: 0}
 --- !u!212 &93168427
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1421,6 +1425,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1348397886}
+  deathExplosion: {fileID: 0}
 --- !u!212 &111448733
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1558,6 +1563,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 439441992}
+  deathExplosion: {fileID: 0}
 --- !u!212 &128431728
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1813,6 +1819,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 327522990}
+  deathExplosion: {fileID: 0}
 --- !u!212 &144591723
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1950,6 +1957,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1356307854}
+  deathExplosion: {fileID: 0}
 --- !u!212 &162900348
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2087,6 +2095,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 791686098}
+  deathExplosion: {fileID: 0}
 --- !u!212 &170761078
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2224,6 +2233,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 762754688}
+  deathExplosion: {fileID: 0}
 --- !u!212 &173452274
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3919,6 +3929,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 2031792546}
+  deathExplosion: {fileID: 0}
 --- !u!212 &413820325
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4342,6 +4353,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 135863186}
+  deathExplosion: {fileID: 0}
 --- !u!212 &427414156
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4647,6 +4659,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1011458039}
+  deathExplosion: {fileID: 0}
 --- !u!212 &454930045
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5367,6 +5380,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 956839345}
+  deathExplosion: {fileID: 0}
 --- !u!212 &525865612
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5584,6 +5598,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1112981919}
+  deathExplosion: {fileID: 0}
 --- !u!212 &584600521
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5721,6 +5736,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1973845166}
+  deathExplosion: {fileID: 0}
 --- !u!212 &586636123
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5858,6 +5874,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1164611508}
+  deathExplosion: {fileID: 0}
 --- !u!212 &601131222
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5995,6 +6012,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 687449854}
+  deathExplosion: {fileID: 0}
 --- !u!212 &613801201
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6245,6 +6263,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 194750191}
+  deathExplosion: {fileID: 0}
 --- !u!212 &622262288
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7145,6 +7164,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1763184157}
+  deathExplosion: {fileID: 0}
 --- !u!212 &691437795
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7282,6 +7302,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 779665238}
+  deathExplosion: {fileID: 0}
 --- !u!212 &691637672
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7503,6 +7524,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 98201417}
+  deathExplosion: {fileID: 0}
 --- !u!212 &693235296
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7640,6 +7662,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 3599094}
+  deathExplosion: {fileID: 0}
 --- !u!212 &697460732
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8150,6 +8173,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1054891237}
+  deathExplosion: {fileID: 0}
 --- !u!212 &755943019
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8287,6 +8311,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 2107640479}
+  deathExplosion: {fileID: 0}
 --- !u!212 &759376351
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8424,6 +8449,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 883482350}
+  deathExplosion: {fileID: 0}
 --- !u!212 &762292815
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9068,6 +9094,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 792784455}
+  deathExplosion: {fileID: 0}
 --- !u!212 &825059127
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9239,6 +9266,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 440929992}
+  deathExplosion: {fileID: 0}
 --- !u!212 &831713896
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9700,6 +9728,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 692123045}
+  deathExplosion: {fileID: 0}
 --- !u!212 &897481398
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10024,6 +10053,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1200782463}
+  deathExplosion: {fileID: 0}
 --- !u!212 &953255638
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10572,6 +10602,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1770330426}
+  deathExplosion: {fileID: 0}
 --- !u!212 &963649144
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10925,6 +10956,73 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1004148329
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1820924786}
+    m_Modifications:
+    - target: {fileID: 5361006130473691440, guid: 9bf2e67f7b033a047aa158e7f51518f4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361006130473691440, guid: 9bf2e67f7b033a047aa158e7f51518f4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.002501
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361006130473691440, guid: 9bf2e67f7b033a047aa158e7f51518f4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361006130473691440, guid: 9bf2e67f7b033a047aa158e7f51518f4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361006130473691440, guid: 9bf2e67f7b033a047aa158e7f51518f4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361006130473691440, guid: 9bf2e67f7b033a047aa158e7f51518f4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361006130473691440, guid: 9bf2e67f7b033a047aa158e7f51518f4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361006130473691440, guid: 9bf2e67f7b033a047aa158e7f51518f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361006130473691440, guid: 9bf2e67f7b033a047aa158e7f51518f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361006130473691440, guid: 9bf2e67f7b033a047aa158e7f51518f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5525561048594000703, guid: 9bf2e67f7b033a047aa158e7f51518f4, type: 3}
+      propertyPath: m_Name
+      value: Dust
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9bf2e67f7b033a047aa158e7f51518f4, type: 3}
+--- !u!4 &1004148330 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5361006130473691440, guid: 9bf2e67f7b033a047aa158e7f51518f4, type: 3}
+  m_PrefabInstance: {fileID: 1004148329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1004148331 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4929048750986351577, guid: 9bf2e67f7b033a047aa158e7f51518f4, type: 3}
+  m_PrefabInstance: {fileID: 1004148329}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1008716856
 GameObject:
   m_ObjectHideFlags: 0
@@ -12140,6 +12238,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 465374444}
+  deathExplosion: {fileID: 0}
 --- !u!212 &1067011733
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12331,6 +12430,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1784638677}
+  deathExplosion: {fileID: 0}
 --- !u!212 &1085960419
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13267,6 +13367,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1092175257}
+  deathExplosion: {fileID: 0}
 --- !u!212 &1168003645
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13706,6 +13807,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1469601142}
+  deathExplosion: {fileID: 0}
 --- !u!212 &1221743545
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15086,6 +15188,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1227601559}
+  deathExplosion: {fileID: 0}
 --- !u!212 &1401977145
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15989,6 +16092,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 61801245}
+  deathExplosion: {fileID: 0}
 --- !u!212 &1531287156
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16126,6 +16230,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 683985967}
+  deathExplosion: {fileID: 0}
 --- !u!212 &1532000741
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16263,6 +16368,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1963092806}
+  deathExplosion: {fileID: 0}
 --- !u!212 &1580163705
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17121,6 +17227,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1392495389}
+  deathExplosion: {fileID: 0}
 --- !u!212 &1658417898
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17811,6 +17918,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 422847327}
+  deathExplosion: {fileID: 0}
 --- !u!212 &1715191677
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18158,6 +18266,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1676424989}
+  deathExplosion: {fileID: 0}
 --- !u!212 &1751558207
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18911,6 +19020,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 677390985}
+  deathExplosion: {fileID: 0}
 --- !u!212 &1768796762
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20965,6 +21075,7 @@ Transform:
   m_Children:
   - {fileID: 38053808}
   - {fileID: 727452616}
+  - {fileID: 1004148330}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1820924788
@@ -21063,7 +21174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1af0ad05b50062c488233b9f5c8bf277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dust: {fileID: 4929048750986351577, guid: aebef9b194efaba448bddc7e893d17b4, type: 3}
+  dust: {fileID: 1004148331}
 --- !u!213 &1849740024
 Sprite:
   m_ObjectHideFlags: 0
@@ -21719,6 +21830,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1327832481}
+  deathExplosion: {fileID: 0}
 --- !u!212 &1901571217
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21940,6 +22052,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 841497070}
+  deathExplosion: {fileID: 0}
 --- !u!212 &1911512413
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22248,6 +22361,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1593833500}
+  deathExplosion: {fileID: 0}
 --- !u!212 &1925496906
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23154,6 +23268,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1610798668}
+  deathExplosion: {fileID: 0}
 --- !u!212 &1997770526
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23459,6 +23574,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 354654474}
+  deathExplosion: {fileID: 0}
 --- !u!212 &2049809459
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24034,6 +24150,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 105739966}
+  deathExplosion: {fileID: 0}
 --- !u!212 &2098171360
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24426,6 +24543,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1049292344}
+  deathExplosion: {fileID: 0}
 --- !u!212 &2128555563
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24773,6 +24891,7 @@ MonoBehaviour:
   maxLife: 2
   shieldedUnity: 0
   shield: {fileID: 1387262986}
+  deathExplosion: {fileID: 0}
 --- !u!212 &2132682877
 SpriteRenderer:
   m_ObjectHideFlags: 0
