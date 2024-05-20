@@ -54,3 +54,4 @@ bin
 asas.keystore
 .vscode
 *.meta
+dist/*
