@@ -18,12 +18,10 @@ public class GrenadePhysics : TimedBomb {
         foreach (Collider2D nearbyObject in colliders) {
             Rigidbody2D rb = nearbyObject.GetComponent<Rigidbody2D>();
             if (rb != null) {
-                Vector2 direction = rb.transform.position - transform.position;
-
-                float distance = direction.magnitude;
-                float forceMagnitude = Mathf.Clamp01((radius - distance) / radius) * force;
-
-                rb.AddForce(direction.normalized * forceMagnitude);
+                Vector2 direction = rb.transform.position - transform.position; // Direction from grenade to object
+                direction.Normalize(); // Normalize the direction vector
+                float forceMagnitude = force; // You can adjust this to control the strength of the launch
+                rb.AddForce(direction * forceMagnitude, ForceMode2D.Impulse);
             }
         }
         // Damage
