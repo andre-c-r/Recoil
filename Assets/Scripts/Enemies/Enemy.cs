@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.Controls;
 
 public class Enemy : MonoBehaviour {
     [SerializeField]
@@ -15,6 +16,8 @@ public class Enemy : MonoBehaviour {
     [SerializeField]
     GameObject deathExplosion;
 
+    public ParticleSystem DeathParticles;
+
     protected void Start() {
         shield.SetActive(shieldedUnity);
     }
@@ -28,13 +31,18 @@ public class Enemy : MonoBehaviour {
         maxLife -= damageTaken;
 
         if (maxLife <= 0) {
+            DeathParticles.Play();
             GameController.Singleton?.playerinventory.ReloadEquipment();
 
             if (deathExplosion != null) {
                 GameObject explosion = Instantiate(deathExplosion, this.transform.position, this.transform.rotation);
                 Destroy(explosion, 5);
             }
-
+            if (DeathParticles != null) {
+                ParticleSystem ps = Instantiate(DeathParticles, transform.position, Quaternion.identity);
+                ps.Play();
+                Destroy(ps.gameObject, ps.main.duration);
+            }
             this.gameObject.SetActive(false);
         }
     }
