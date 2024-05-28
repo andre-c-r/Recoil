@@ -7,8 +7,7 @@ using UnityEngine.Rendering;
 
 [CreateAssetMenu(fileName = "GrenadeThrower", menuName = "ScriptableObjects/GrenadeThrower", order = 2)]
 public class GrenadeThrower : ScriptableObject {
-    [SerializeField]
-    protected float throwForce = 0f;
+    public float throwForce = 20f;
 
     public GameObject grenadePrefab;
 

@@ -102,7 +102,7 @@ MonoBehaviour:
   radius: 5
   force: 700
   explosionEffect: {fileID: 4428855236299686268, guid: a6e4e1c45410abd4d9e43f1fd46ced11, type: 3}
-  delay: 3
+  delay: 2
 --- !u!58 &5566264580517869800
 CircleCollider2D:
   m_ObjectHideFlags: 0
