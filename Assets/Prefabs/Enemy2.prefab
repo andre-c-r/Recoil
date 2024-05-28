@@ -4947,7 +4947,6 @@ GameObject:
   - component: {fileID: 8763795153413333713}
   - component: {fileID: 7924270624697498067}
   - component: {fileID: 774334248819751945}
-  - component: {fileID: -3135247582942470317}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -5040,7 +5039,6 @@ MonoBehaviour:
   shieldedUnity: 0
   shield: {fileID: 2796980009640562135}
   deathExplosion: {fileID: 0}
-  DeathParticles: {fileID: 6388005773132685518}
 --- !u!58 &8763795153413333713
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5114,15 +5112,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-3135247582942470317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3710462378255643777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 587c2071edabd3644b1570df0e25c889, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
