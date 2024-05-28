@@ -23,7 +23,9 @@ public class PullGrenadePhysics : TimedBomb {
                 float distance = direction.magnitude;
                 float pullForceMagnitude = Mathf.Clamp01((radius - distance) / radius) * force;
 
-                rb.AddForce(direction.normalized * pullForceMagnitude);
+
+                if (nearbyObject.CompareTag("Player")) nearbyObject.GetComponent<Player>().ApplyExternalForce(direction * pullForceMagnitude);
+                else rb.AddForce(direction * pullForceMagnitude, ForceMode2D.Impulse);
             }
         }
         // Damage

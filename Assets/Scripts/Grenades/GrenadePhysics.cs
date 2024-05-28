@@ -21,7 +21,9 @@ public class GrenadePhysics : TimedBomb {
                 Vector2 direction = rb.transform.position - transform.position; // Direction from grenade to object
                 direction.Normalize(); // Normalize the direction vector
                 float forceMagnitude = force; // You can adjust this to control the strength of the launch
-                rb.AddForce(direction * forceMagnitude, ForceMode2D.Impulse);
+
+                if (nearbyObject.CompareTag("Player")) nearbyObject.GetComponent<Player>().ApplyExternalForce(direction * forceMagnitude);
+                else rb.AddForce(direction * forceMagnitude, ForceMode2D.Impulse);
             }
         }
         // Damage

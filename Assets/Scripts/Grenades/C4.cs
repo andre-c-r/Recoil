@@ -21,7 +21,8 @@ public class C4 : Grenade {
                 float distance = direction.magnitude;
                 float forceMagnitude = Mathf.Clamp01((radius - distance) / radius) * force;
 
-                rb.AddForce(direction.normalized * forceMagnitude);
+                if (nearbyObject.CompareTag("Player")) nearbyObject.GetComponent<Player>().ApplyExternalForce(direction * forceMagnitude);
+                else rb.AddForce(direction * forceMagnitude, ForceMode2D.Impulse);
             }
         }
         // Damage

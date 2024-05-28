@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAfterImagePool : MonoBehaviour
-{
+public class PlayerAfterImagePool : MonoBehaviour {
     [SerializeField]
     private GameObject afterImagePrefab;
 
@@ -11,32 +10,28 @@ public class PlayerAfterImagePool : MonoBehaviour
 
     public static PlayerAfterImagePool Instance { get; private set; }
 
-    private void Awake()
-    {
+    private void Awake() {
+        if (Instance != null) Destroy(this.gameObject);
+
         Instance = this;
         GrowPool();
     }
 
-    private void GrowPool()
-    {
-        for (int i = 0; i < 10; i++)
-        {
+    private void GrowPool() {
+        for (int i = 0; i < 10; i++) {
             var instanceToAdd = Instantiate(afterImagePrefab);
             instanceToAdd.transform.SetParent(transform);
             AddToPool(instanceToAdd);
         }
     }
 
-    public void AddToPool(GameObject instance)
-    {
+    public void AddToPool(GameObject instance) {
         instance.SetActive(false);
         availableObjects.Enqueue(instance);
     }
 
-    public GameObject GetFromPool()
-    {
-        if(availableObjects.Count == 0)
-        {
+    public GameObject GetFromPool() {
+        if (availableObjects.Count == 0) {
             GrowPool();
         }
 
@@ -46,5 +41,5 @@ public class PlayerAfterImagePool : MonoBehaviour
 
     }
 
-    
+
 }
