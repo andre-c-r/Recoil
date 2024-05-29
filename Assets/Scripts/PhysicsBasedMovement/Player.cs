@@ -31,6 +31,7 @@ public class Player : MonoBehaviour {
     public float castDistance;
     public LayerMask grounderMask;
 
+
     private void Awake() {
         _rigidBody = this.GetComponent<Rigidbody2D>();
         

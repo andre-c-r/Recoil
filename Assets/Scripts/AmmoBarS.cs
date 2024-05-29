@@ -17,4 +17,5 @@ public class AmmoBarS : MonoBehaviour
     {
         slider.value = ammo;
     }
+
 }

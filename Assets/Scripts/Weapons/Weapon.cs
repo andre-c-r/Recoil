@@ -40,8 +40,11 @@ public class Weapon : MonoBehaviour {
 
         _currentAmmo--;
 
+
         //Código para a barra de munição - Luiz
-        ammoBara.SetAmmoLeft(_currentAmmo);
+        if (ammoBara != null){
+            ammoBara.SetAmmoLeft(_currentAmmo);
+        }
 
         if (projectilePrefab == null) return;
 
@@ -53,14 +56,19 @@ public class Weapon : MonoBehaviour {
         _currentAmmo += ammoAmount;
         
         //Código para a barra de munição - Luiz
-        ammoBara.SetAmmoLeft(_currentAmmo);
+        if (ammoBara != null){
+            ammoBara.SetAmmoLeft(_currentAmmo);
+        }
+
     }
 
     public virtual void FullReload() {
         _currentAmmo = maxAmmo;
 
         //Código para a barra de munição - Luiz
-        ammoBara.SetMaxAmmo(maxAmmo);
+        if (ammoBara != null){
+            ammoBara.SetMaxAmmo(maxAmmo);
+        }
     }
 
     public virtual void AimWeapon(Vector2 targetPosition) {

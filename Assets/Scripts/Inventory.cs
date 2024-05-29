@@ -28,4 +28,5 @@ public class Inventory : MonoBehaviour {
     public void EquipGrenade(GrenadeThrower newGrenade) {
         _equippedGrenadeThrower = newGrenade;
     }
+
 }
